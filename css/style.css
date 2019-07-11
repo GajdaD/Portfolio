@@ -16,7 +16,7 @@ body {
 
 main {
     font-family: 'Sansita', sans-serif;
-    background-color: #D5D5D5;
+    background-color: #BFC0C0;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
     font-size: 28px;
     color: #FFFFFF;
     font-weight: bold;
-    background-color: #9099A2;
+    background-color: #EF8354;
 }
 
 .div_info {
@@ -33,5 +33,12 @@ header {
     margin: 0 auto;
     margin-top: 10px;
     color: #FFFFFF;
-    background-color: #6D7993;
+    background-color: #4F5D75;
+}
+
+.div_inset {
+    width: 100%;
+    margin-top: 10px;
+    color: #FFFFFF;
+    background-color: #2D3142;
 }
