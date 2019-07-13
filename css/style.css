@@ -29,7 +29,7 @@ header {
 }
 
 .div_info {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 10px;
     color: #FFFFFF;
@@ -41,4 +41,12 @@ header {
     margin-top: 10px;
     color: #FFFFFF;
     background-color: #2D3142;
+}
+
+.p_info {
+    text-align: justify;
+    padding-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 18px;
 }
