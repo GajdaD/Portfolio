@@ -44,7 +44,7 @@ header {
 }
 
 .p_info {
-    text-align: justify;
+    text-align: left;
     padding-bottom: 10px;
     width: 90%;
     margin: 0 auto;
