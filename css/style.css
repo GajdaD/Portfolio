@@ -50,3 +50,43 @@ header {
     margin: 0 auto;
     font-size: 18px;
 }
+
+#div_umiejetnosci {
+    padding-bottom: 16px;
+}
+
+.div_skills {
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: 12px;
+}
+
+.div_skills_img {
+    width: 50%;
+    float: left;
+    height: 128px;
+}
+
+.img_skills {
+    height: 110px;
+    margin-top: 9px;
+}
+
+.div_skills_p {
+    width: 50%;
+    float: left;
+    text-align: center;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.span_skills_title {
+    font-size: 24px;
+}
+
+.span_skills {
+    font-size: 16px;
+}
