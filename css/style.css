@@ -28,12 +28,45 @@ header {
     background-color: #EF8354;
 }
 
+#div_menu {
+    position: sticky;
+    position: -webkit-sticky;
+    /* Safari */
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
 .div_info {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 10px;
     color: #FFFFFF;
     background-color: #4F5D75;
+    min-width: 260px;
 }
 
 .div_inset {
@@ -51,12 +84,16 @@ header {
     margin: 0 auto;
 }
 
+.p_font_size_medium {
+    font-size: 24px;
+}
+
 .p_info {
     text-align: left;
     padding-bottom: 10px;
     width: 90%;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #div_umiejetnosci {
@@ -87,6 +124,12 @@ header {
 @media only screen and (max-width: 760px) {
     .div_skills {
         margin: 10px 30px;
+    }
+    .p_info {
+        font-size: 18px;
+    }
+    #div_menu {
+        display: none;
     }
 }
 
