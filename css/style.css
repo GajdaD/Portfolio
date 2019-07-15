@@ -178,7 +178,9 @@ li a:hover {
     padding-top: 20px;
 }
 
-#div_contact {}
+#div_contact {
+    width: 80%;
+}
 
 footer {
     width: 100%;
