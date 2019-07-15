@@ -180,6 +180,33 @@ li a:hover {
 
 #div_contact {
     width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+#div_contact_left {
+    width: 43%;
+    float: left;
+    padding: 2%;
+    margin-right: 4%;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 24px;
+}
+
+#div_contact_right {
+    width: 43%;
+    float: left;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 24px;
+}
+
+.p_indent {
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 footer {
