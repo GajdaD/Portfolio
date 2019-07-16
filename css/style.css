@@ -44,7 +44,7 @@ header {
     top: 0;
 }
 
-ul {
+#div_menu ul {
     list-style-type: none;
     overflow: hidden;
     background-color: #333;
@@ -52,12 +52,12 @@ ul {
     width: 100%;
 }
 
-li {
+#div_menu li {
     float: left;
     width: 25%;
 }
 
-li a {
+#div_menu li a {
     display: block;
     color: white;
     text-align: center;
@@ -65,7 +65,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#div_menu li a:hover {
     background-color: #111;
 }
 
@@ -225,10 +225,83 @@ footer {
         top: 5px;
         right: 5px;
     }
+    #mobile_menu_title_div {
+        width: 100%;
+    }
+    #mobile_menu_title_span {
+        width: 80%;
+        font-size: 24px;
+        float: left;
+        background-color: #EF8354;
+        height: 64px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 64px;
+    }
+    #mobile_menu_img_close {
+        width: 20%;
+        float: left;
+        background-color: #EF8354;
+        height: 64px;
+    }
     .nav_mobile_center {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    #div_mobile_menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: blueviolet;
+    }
+    #div_mobile_menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+    #div_mobile_menu li a {
+        display: block;
+        color: #000;
+        padding: 16px 16px;
+        text-decoration: none;
+        position: relative;
+        font-size: 18px;
+    }
+    #div_mobile_menu li a::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        bottom: 10px;
+        height: 2px;
+        background: #d70039;
+    }
+    #div_mobile_menu_content {
+        width: 100%;
+        height: calc(100% - 64px);
+    }
+    #div_mobile_menu_left,
+    #div_mobile_menu_right {
+        width: 15%;
+        height: 100%;
+        background-image: linear-gradient(to right, gray, white);
+        float: left;
+    }
+    #div_mobile_menu_right {
+        background-image: linear-gradient(to left, gray, white);
+    }
+    #div_mobile_menu_center {
+        width: 70%;
+        height: 100%;
+        background-color: #333;
+        float: left;
+    }
+    .mobile_menu_border_bottom {
+        border-bottom: #000;
     }
     .div_skills {
         margin: 10px 30px;
