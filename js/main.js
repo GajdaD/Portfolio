@@ -1,1 +1,1 @@
-console.log("XX")
+document.getElementById("#nav_mobile_menu").addEventListener("click", function() { alert("Hello World!"); });
