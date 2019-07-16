@@ -29,6 +29,14 @@ header {
     background-color: #EF8354;
 }
 
+#div_mobile_menu {
+    display: none;
+}
+
+#nav_mobile_menu {
+    display: none;
+}
+
 #div_menu {
     position: sticky;
     position: -webkit-sticky;
@@ -131,21 +139,6 @@ li a:hover {
     margin: 30px;
 }
 
-@media only screen and (max-width: 760px) {
-    .div_skills {
-        margin: 10px 30px;
-    }
-    .p_info {
-        font-size: 18px;
-    }
-    #div_menu {
-        display: none;
-    }
-    .hash_jump::before {
-        display: none;
-    }
-}
-
 .div_skills_img {
     width: 50%;
     float: left;
@@ -186,17 +179,17 @@ li a:hover {
 }
 
 #div_contact_left {
-    width: 43%;
+    width: 44%;
     float: left;
     padding: 2%;
-    margin-right: 4%;
+    margin-right: 2%;
     border: 1px solid black;
     border-radius: 25px;
     font-size: 24px;
 }
 
 #div_contact_right {
-    width: 43%;
+    width: 44%;
     float: left;
     padding: 2%;
     border: 1px solid black;
@@ -205,16 +198,78 @@ li a:hover {
 }
 
 .p_indent {
-    margin-left: 20px;
+    margin-left: 16px;
     font-size: 20px;
 }
 
 footer {
     width: 100%;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     color: #FFFFFF;
     font-weight: bold;
     background-color: #EF8354;
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 760px) {
+    header {
+        text-align: left;
+        font-size: 32px;
+        width: 90%;
+        padding-left: 10%;
+    }
+    #nav_mobile_menu {
+        display: block;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+    }
+    .nav_mobile_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .div_skills {
+        margin: 10px 30px;
+    }
+    .p_info {
+        font-size: 18px;
+    }
+    .p_font_size_big {
+        font-size: 24px;
+    }
+    .p_font_size_medium {
+        font-size: 20px;
+    }
+    #div_menu {
+        display: none;
+    }
+    .hash_jump::before {
+        display: none;
+    }
+    #div_contact_left {
+        width: 93%;
+        padding: 3%;
+        margin-right: 4%;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #div_contact_right {
+        width: 93%;
+        padding: 3%;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        margin: 0 auto;
+    }
+    .p_indent {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    footer {
+        font-size: 14px;
+    }
 }
