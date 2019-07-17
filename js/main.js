@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("nav_mobile_menu").removeEventListener("click", animation_function);
         let i_1 = 0
         let i_2 = 0;
-        let animation_1 = setInterval(f_animation_1, 5);
+        let animation_1 = setInterval(f_animation_1, 4);
         document.getElementById("animation_mobile_menu").style.display = "block";
         document.getElementById("div_mobile_menu").style.display = "block";
         document.getElementById("nav_mobile_menu").style.display = "none";
@@ -15,17 +15,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             document.getElementById("animation_mobile_menu").style.width = i_1 + "%";
             document.getElementById("animation_mobile_menu").style.height = i_1 + "%";
-            if (i_1 > 50) {
-
-                //document.getElementById("animation_mobile_menu").style.opacity = (1.5 - i_2);
-
-            }
             if (i_1 > 100) {
                 i_2 += 0.02;
                 document.getElementById("div_mobile_menu").style.opacity = i_2;
 
             }
-            if (i_1 > 200) {
+            if (i_1 > 150) {
                 clearInterval(animation_1);
                 document.getElementById("animation_mobile_menu").style.display = "none";
                 document.getElementById("mobile_menu_img_close").addEventListener("click", animation_function_2)
@@ -39,16 +34,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("mobile_menu_img_close").removeEventListener("click", animation_function_2);
         let i_1 = 100;
         let i_2 = 1;
-        let animation = setInterval(f_animation, 5);
+        let animation = setInterval(f_animation, 4);
         document.getElementById("animation_mobile_menu_out").style.display = "block";
 
         function f_animation() {
-            i_1--;
-            i_2 -= 0.01;
 
-            document.getElementById("animation_mobile_menu_out").style.width = i_1 + "%";
-            document.getElementById("animation_mobile_menu_out").style.height = i_1 + "%";
+            i_2 -= 0.02;
             document.getElementById("div_mobile_menu").style.opacity = i_2;
+            if (i_2 <= 0) {
+                i_1--;
+                document.getElementById("animation_mobile_menu_out").style.width = i_1 + "%";
+                document.getElementById("animation_mobile_menu_out").style.height = i_1 + "%";
+            }
             if (i_1 <= 0) {
                 clearInterval(animation);
                 document.getElementById("div_mobile_menu").style.display = "none";
