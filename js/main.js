@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("mobile_menu_img_close").removeEventListener("click", animation_function_2);
         let i_1 = 100;
         let i_2 = 1;
-        let animation = setInterval(f_animation, 4);
+        let animation = setInterval(f_animation, 5);
         document.getElementById("animation_mobile_menu_out").style.display = "block";
 
         function f_animation() {
