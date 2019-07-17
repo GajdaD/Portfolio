@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("nav_mobile_menu").removeEventListener("click", animation_function);
         let i_1 = 0
         let i_2 = 0;
-        let animation_1 = setInterval(f_animation_1, 50);
+        let animation_1 = setInterval(f_animation_1, 5);
         document.getElementById("animation_mobile_menu").style.display = "block";
         document.getElementById("div_mobile_menu").style.display = "block";
         document.getElementById("nav_mobile_menu").style.display = "none";
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             }
             if (i_1 > 100) {
-                i_2 += 0.01;
+                i_2 += 0.02;
                 document.getElementById("div_mobile_menu").style.opacity = i_2;
 
             }
