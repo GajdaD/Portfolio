@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("nav_mobile_menu").removeEventListener("click", animation_function);
         let i_1 = 0
         let i_2 = 0;
-        let animation_1 = setInterval(f_animation_1, 5);
+        let animation_1 = setInterval(f_animation_1, 50);
         document.getElementById("animation_mobile_menu").style.display = "block";
         document.getElementById("div_mobile_menu").style.display = "block";
         document.getElementById("nav_mobile_menu").style.display = "none";
@@ -16,15 +16,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById("animation_mobile_menu").style.width = i_1 + "%";
             document.getElementById("animation_mobile_menu").style.height = i_1 + "%";
             if (i_1 > 50) {
-                i_2 += 0.02;
-                document.getElementById("animation_mobile_menu").style.opacity = (1.5 - i_2);
-                document.getElementById("div_mobile_menu").style.opacity = i_2;
+
+                //document.getElementById("animation_mobile_menu").style.opacity = (1.5 - i_2);
+
             }
             if (i_1 > 100) {
+                i_2 += 0.01;
+                document.getElementById("div_mobile_menu").style.opacity = i_2;
+
+            }
+            if (i_1 > 200) {
                 clearInterval(animation_1);
                 document.getElementById("animation_mobile_menu").style.display = "none";
                 document.getElementById("mobile_menu_img_close").addEventListener("click", animation_function_2)
             }
+
         }
 
     };
