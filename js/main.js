@@ -109,4 +109,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         }
     });
+    //Slider
+    const elem = document.getElementsByClassName("slider_images");
+    const tab_images = [elem[0], elem[1], elem[2]]
+    var active = 0;
+    const elem_count = 2;
+
+    document.getElementById("slider_control_next").addEventListener("click", moveRight)
+    document.getElementById("slider_control_prev").addEventListener("click", moveLeft)
+
+    function moveRight() {
+        console.log("right");
+        let elem_old = tab_images[active];
+        let elem_new = tab_images[active + 1];
+        elem_old.style.display = "none";
+        elem_new.style.display = "block";
+        active++;
+        if (active == elem_count) {
+            document.getElementById("slider_control_next").removeEventListener("click", moveRight)
+            document.getElementById("slider_control_next").style.opacity = 0.5;
+        }
+    };
+
+    function moveLeft() {
+        console.log("left");
+        let elem_old = tab_images[active];
+        let elem_new = tab_images[active - 1];
+        elem_old.style.display = "none";
+        elem_new.style.display = "block";
+        active--;
+        if (active == 0) {
+            document.getElementById("slider_control_prev").removeEventListener("click", moveLeft)
+            document.getElementById("slider_control_prev").style.opacity = 0.5;
+        }
+    };
 });
