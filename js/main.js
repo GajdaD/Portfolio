@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     };
     // Mobile menu hide away - click link
-    let menu_mobile_link = document.getElementsByClassName("menu_mobile_link");
+    const menu_mobile_link = document.getElementsByClassName("menu_mobile_link");
     for (let i = 0; i < menu_mobile_link.length; i++) {
         menu_mobile_link[i].addEventListener("click", function() {
             document.getElementById("animation_mobile_menu").style.display = "none";
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         if (!callback || typeof callback !== 'function') return;
 
-        var is_scrolling;
+        let is_scrolling;
         let elem = document.getElementById("nav_mobile_center").style.width = 100 + "%";
         let elem_width = elem.slice(0, -1);
 

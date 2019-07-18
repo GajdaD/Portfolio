@@ -56,6 +56,7 @@ header {
 
 #nav_mobile_menu {
     display: none;
+    z-index: 2;
 }
 
 #div_menu {
@@ -190,6 +191,27 @@ header {
 #link_projects,
 #link_contact {
     padding-top: 20px;
+}
+
+#div_slider {
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+#slider_main {
+    width: 100%;
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider_images {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #div_contact {
@@ -410,6 +432,9 @@ footer {
     }
     .hash_jump::before {
         display: none;
+    }
+    #slider_main {
+        height: 360px;
     }
     #div_contact_left {
         width: 93%;
