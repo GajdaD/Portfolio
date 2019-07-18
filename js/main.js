@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("nav_mobile_menu").removeEventListener("click", animation_function);
         let i_1 = 0
         let i_2 = 0;
-        let animation_1 = setInterval(f_animation_1, 4);
+        let animation_1 = setInterval(f_animation_1, 5);
         document.getElementById("animation_mobile_menu").style.display = "block";
         document.getElementById("div_mobile_menu").style.display = "block";
         document.getElementById("nav_mobile_menu").style.display = "none";
 
         function f_animation_1() {
-            i_1++;
+            i_1 += 2;
 
             document.getElementById("animation_mobile_menu").style.width = i_1 + "%";
             document.getElementById("animation_mobile_menu").style.height = i_1 + "%";
-            if (i_1 > 100) {
+            if (i_1 > 50) {
                 i_2 += 0.02;
                 document.getElementById("div_mobile_menu").style.opacity = i_2;
 
@@ -63,8 +63,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 });
-//https://icons8.com/icons
-//https://www.w3schools.com/css/css3_gradients.asp
-//https://www.rafalrebacz.pl/2016/06/10/shadow-cien-w-css/
-//https://cssanimation.rocks/pl/portal/
-//https://www.w3schools.com/css/css3_animations.asp
