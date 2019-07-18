@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }, false);
     };
     scroll_stop(function() {
-        let animation = setInterval(f_animation, 10);
+        let animation = setInterval(f_animation, 5);
 
         let elem_2 = document.getElementById("nav_mobile_center").style.width;
         let elem_width_2 = elem_2.slice(0, -1);
