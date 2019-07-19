@@ -109,38 +109,64 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         }
     });
-    //Slider
+    //Slider navigation
     const elem = document.getElementsByClassName("slider_images");
-    const tab_images = [elem[0], elem[1], elem[2]]
+    const elem_div = document.getElementsByClassName("div_slider_inside");
+    const elem_span = document.getElementsByClassName("slider_span");
+    const tab_images = [elem[0], elem[1], elem[2]];
+    const tab_divs = [elem_div[0], elem_div[1], elem_div[2]];
+    const tab_spans = [elem_span[0], elem_span[1], elem_span[2]];
     var active = 0;
     const elem_count = 2;
 
-    document.getElementById("slider_control_next").addEventListener("click", moveRight)
-    document.getElementById("slider_control_prev").addEventListener("click", moveLeft)
+    const slider_control_next = document.getElementById("slider_control_next");
+    const slider_control_prev = document.getElementById("slider_control_prev");
 
-    function moveRight() {
-        console.log("right");
+    slider_control_prev.style.opacity = 0.4;
+
+    slider_control_next.addEventListener("click", move_right)
+
+    function move_right() {
+        if (active == 0) {
+            slider_control_prev.addEventListener("click", move_left);
+            slider_control_prev.style.opacity = 0.8;
+        }
+
         let elem_old = tab_images[active];
         let elem_new = tab_images[active + 1];
+
         elem_old.style.display = "none";
         elem_new.style.display = "block";
         active++;
         if (active == elem_count) {
-            document.getElementById("slider_control_next").removeEventListener("click", moveRight)
-            document.getElementById("slider_control_next").style.opacity = 0.5;
+            slider_control_next.removeEventListener("click", move_right)
+            slider_control_next.style.opacity = 0.4;
         }
     };
 
-    function moveLeft() {
-        console.log("left");
+    function move_left() {
+        if (active == 2) {
+            slider_control_next.addEventListener("click", move_right);
+            slider_control_next.style.opacity = 0.8;
+        }
+
         let elem_old = tab_images[active];
         let elem_new = tab_images[active - 1];
         elem_old.style.display = "none";
         elem_new.style.display = "block";
         active--;
         if (active == 0) {
-            document.getElementById("slider_control_prev").removeEventListener("click", moveLeft)
-            document.getElementById("slider_control_prev").style.opacity = 0.5;
+            slider_control_prev.removeEventListener("click", move_left)
+            slider_control_prev.style.opacity = 0.4;
         }
     };
+    //Slider click
+    for (let i = 0; i <= elem_count; i++) {
+        tab_images[i].addEventListener("click", function() {
+            console.log(i);
+            tab_images[i].style.opacity = 0.6;
+            tab_spans[i].style.display = "block";
+        });
+    }
+
 });

@@ -203,10 +203,28 @@ header {
 
 #slider_main {
     width: 100%;
-    height: 640px;
+    height: 760px;
     overflow: hidden;
     display: inline-block;
     position: relative;
+    text-align: center;
+}
+
+.div_slider_inside {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider_span {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: white;
+    opacity: 1;
+    bottom: 0;
 }
 
 .slider_images {
@@ -254,6 +272,13 @@ header {
 #slider_control_next {
     right: 0;
     border-radius: 2px 0 0 2px;
+}
+
+.div_slider_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
 }
 
 #div_contact {
@@ -476,7 +501,7 @@ footer {
         display: none;
     }
     #slider_main {
-        height: 360px;
+        height: 580px;
     }
     #div_contact_left {
         width: 93%;
