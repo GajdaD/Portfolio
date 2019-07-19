@@ -112,8 +112,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //Slider navigation
     const elem = document.getElementsByClassName("slider_images");
     const elem_clicked = document.getElementsByClassName("slider_images_clicked");
+    const elem_clicked_top = document.getElementsByClassName("slider_click_top");
+    const elem_clicked_bottom = document.getElementsByClassName("slider_click_bottom");
     const tab_images = [elem[0], elem[1], elem[2]];
     const tab_images_clicked = [elem_clicked[0], elem_clicked[1], elem_clicked[2]];
+    const tab_images_clicked_top = [elem_clicked_top[0], elem_clicked_top[1], elem_clicked_top[2]];
+    const tab_images_clicked_bottom = [elem_clicked_bottom[0], elem_clicked_bottom[1], elem_clicked_bottom[2]];
+    const tab_top_links = ["https://github.com/GajdaD/WayToFortune", "https://github.com/GajdaD/Ball-game", "https://github.com/GajdaD/Memory-game"];
+    const tab_bottom_links = ["http://waytofortune.epizy.com/index.php", "https://gajdad.github.io/Ball-game/", "https://gajdad.github.io/Memory-game/"]
     var active = 0;
     const elem_count = 2;
 
@@ -134,10 +140,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let elem_old = tab_images[active];
         let elem_new = tab_images[active + 1];
         let elem_old_clicked = tab_images_clicked[active];
+        let elem_old_clicked_top = tab_images_clicked_top[active];
+        let elem_old_clicked_bottom = tab_images_clicked_bottom[active];
 
         elem_old.style.display = "none";
         elem_new.style.display = "block";
         elem_old_clicked.style.display = "none";
+        elem_old_clicked_top.style.display = "none";
+        elem_old_clicked_bottom.style.display = "none";
         active++;
         if (active == elem_count) {
             slider_control_next.removeEventListener("click", move_right)
@@ -154,10 +164,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let elem_old = tab_images[active];
         let elem_new = tab_images[active - 1];
         let elem_old_clicked = tab_images_clicked[active];
+        let elem_old_clicked_top = tab_images_clicked_top[active];
+        let elem_old_clicked_bottom = tab_images_clicked_bottom[active];
 
         elem_old.style.display = "none";
         elem_new.style.display = "block";
         elem_old_clicked.style.display = "none";
+        elem_old_clicked_top.style.display = "none";
+        elem_old_clicked_bottom.style.display = "none";
         active--;
         if (active == 0) {
             slider_control_prev.removeEventListener("click", move_left)
@@ -172,8 +186,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 tab_images[i].style.display = "none";
                 tab_images[i].classList.remove("slider_images_hidden");
                 tab_images_clicked[i].style.display = "block";
+                tab_images_clicked_top[i].style.display = "block";
+                tab_images_clicked_bottom[i].style.display = "block";
+                tab_images_clicked_top[i].addEventListener("click", function() {
+                    window.open(tab_top_links[i], '_blank');
+                })
+                tab_images_clicked_bottom[i].addEventListener("click", function() {
+                    window.open(tab_bottom_links[i], '_blank');
+                })
             }, 300)
-
 
         });
     }

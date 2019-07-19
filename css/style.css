@@ -236,6 +236,34 @@ header {
     opacity: 0;
 }
 
+.slider_click_top {
+    position: absolute;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 420px;
+    height: 25%;
+    max-width: 420px;
+    min-width: 260px;
+    display: none;
+}
+
+.slider_click_bottom {
+    position: absolute;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 420px;
+    height: 25%;
+    max-width: 420px;
+    min-width: 260px;
+    display: none;
+}
+
 #slider_control_prev,
 #slider_control_next {
     position: absolute;
@@ -490,6 +518,12 @@ footer {
     }
     #slider_main {
         height: 520px;
+    }
+    .slider_click_top {
+        width: 40%;
+    }
+    .slider_click_bottom {
+        width: 40%;
     }
     #div_contact_left {
         width: 93%;
