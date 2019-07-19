@@ -167,8 +167,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //Slider click
     for (let i = 0; i <= elem_count; i++) {
         tab_images[i].addEventListener("click", function() {
-            tab_images[i].style.display = "none";
-            tab_images_clicked[i].style.display = "block";
+            tab_images[i].classList.add("slider_images_hidden");
+            window.setTimeout(function() {
+                tab_images[i].style.display = "none";
+                tab_images[i].classList.remove("slider_images_hidden");
+                tab_images_clicked[i].style.display = "block";
+            }, 300)
+
 
         });
     }

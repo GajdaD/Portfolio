@@ -220,6 +220,7 @@ header {
     object-fit: contain;
     z-index: 1;
     display: none;
+    transition: opacity 0.3s linear;
 }
 
 .slider_images_clicked {
@@ -229,6 +230,10 @@ header {
     object-fit: contain;
     z-index: 1;
     display: none;
+}
+
+.slider_images_hidden {
+    opacity: 0;
 }
 
 #slider_control_prev,
