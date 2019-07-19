@@ -111,11 +111,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     //Slider navigation
     const elem = document.getElementsByClassName("slider_images");
-    const elem_div = document.getElementsByClassName("div_slider_inside");
-    const elem_span = document.getElementsByClassName("slider_span");
+    const elem_clicked = document.getElementsByClassName("slider_images_clicked");
     const tab_images = [elem[0], elem[1], elem[2]];
-    const tab_divs = [elem_div[0], elem_div[1], elem_div[2]];
-    const tab_spans = [elem_span[0], elem_span[1], elem_span[2]];
+    const tab_images_clicked = [elem_clicked[0], elem_clicked[1], elem_clicked[2]];
     var active = 0;
     const elem_count = 2;
 
@@ -123,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const slider_control_prev = document.getElementById("slider_control_prev");
 
     slider_control_prev.style.opacity = 0.4;
+    tab_images[0].style.display = "block";
 
     slider_control_next.addEventListener("click", move_right)
 
@@ -134,9 +133,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         let elem_old = tab_images[active];
         let elem_new = tab_images[active + 1];
+        let elem_old_clicked = tab_images_clicked[active];
 
         elem_old.style.display = "none";
         elem_new.style.display = "block";
+        elem_old_clicked.style.display = "none";
         active++;
         if (active == elem_count) {
             slider_control_next.removeEventListener("click", move_right)
@@ -152,8 +153,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         let elem_old = tab_images[active];
         let elem_new = tab_images[active - 1];
+        let elem_old_clicked = tab_images_clicked[active];
+
         elem_old.style.display = "none";
         elem_new.style.display = "block";
+        elem_old_clicked.style.display = "none";
         active--;
         if (active == 0) {
             slider_control_prev.removeEventListener("click", move_left)
@@ -163,9 +167,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //Slider click
     for (let i = 0; i <= elem_count; i++) {
         tab_images[i].addEventListener("click", function() {
-            console.log(i);
-            tab_images[i].style.opacity = 0.6;
-            tab_spans[i].style.display = "block";
+            tab_images[i].style.display = "none";
+            tab_images_clicked[i].style.display = "block";
+
         });
     }
 
