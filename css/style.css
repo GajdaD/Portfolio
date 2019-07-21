@@ -102,6 +102,7 @@ header {
     color: #FFFFFF;
     background-color: #4F5D75;
     min-width: 260px;
+    overflow: auto;
 }
 
 .hash_jump::before {
@@ -111,6 +112,23 @@ header {
     height: 61px;
     visibility: hidden;
     pointer-events: none;
+}
+
+#div_about_me_left {
+    float: left;
+    width: 30%;
+}
+
+#div_about_me_left_inside {
+    background-color: #000;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#div_about_me_p {
+    float: left;
+    width: 70%;
 }
 
 .div_inset {
@@ -338,6 +356,86 @@ footer {
     margin-top: 20px;
 }
 
+.p_neon {
+    color: #fff;
+    font-family: 'Dosis', Calibri, sans-serif;
+    font-weight: 200;
+    font-size: 45px;
+    text-align: center;
+}
+
+.p_neon_first {
+    text-shadow: 0px 0px 3px #9D00FF, 0px 0px 6px #9D00FF, 0px 0px 9px #9D00FF, 0px 0px 12px #9D00FF, 0px 0px 15px #9D00FF, 0px 0px 18px #9D00FF;
+    margin-top: 20px;
+}
+
+.p_neon_second {
+    text-shadow: 0px 0px 3px #33FF00, 0px 0px 6px #33FF00, 0px 0px 9px #33FF00, 0px 0px 12px #33FF00, 0px 0px 15px #33FF00, 0px 0px 18px #33FF00;
+    margin-left: 20px;
+}
+
+.neon_flickering-1 {
+    animation: flickering-1 4s infinite;
+}
+
+.neon_flickering-2 {
+    animation: flickering-2 3s infinite;
+}
+
+@keyframes flickering-1 {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flickering-2 {
+    0% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 1;
+    }
+    72% {
+        opacity: 1;
+    }
+    76% {
+        opacity: 0;
+    }
+    77% {
+        opacity: 1;
+    }
+    82% {
+        opacity: 1;
+    }
+    86% {
+        opacity: 0;
+    }
+    87% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media only screen and (max-width: 760px) {
     header {
         text-align: left;
@@ -425,78 +523,12 @@ footer {
         background-color: #000;
         float: left;
     }
-    .p_neon {
-        color: #fff;
-        font-family: 'Dosis', Calibri, sans-serif;
-        font-weight: 200;
-        font-size: 45px;
-        text-align: center;
+    #div_about_me_left {
+        display: none;
     }
-    .p_neon_first {
-        text-shadow: 0px 0px 3px #9D00FF, 0px 0px 6px #9D00FF, 0px 0px 9px #9D00FF, 0px 0px 12px #9D00FF, 0px 0px 15px #9D00FF, 0px 0px 18px #9D00FF;
-        margin-top: 20px;
-    }
-    .p_neon_second {
-        text-shadow: 0px 0px 3px #33FF00, 0px 0px 6px #33FF00, 0px 0px 9px #33FF00, 0px 0px 12px #33FF00, 0px 0px 15px #33FF00, 0px 0px 18px #33FF00;
-        margin-left: 20px;
-    }
-    .neon_flickering-1 {
-        animation: flickering-1 4s infinite;
-    }
-    .neon_flickering-2 {
-        animation: flickering-2 3s infinite;
-    }
-    @keyframes flickering-1 {
-        0% {
-            opacity: 1;
-        }
-        45% {
-            opacity: 1;
-        }
-        49% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    @keyframes flickering-2 {
-        0% {
-            opacity: 1;
-        }
-        31% {
-            opacity: 1;
-        }
-        35% {
-            opacity: 0;
-        }
-        36% {
-            opacity: 1;
-        }
-        72% {
-            opacity: 1;
-        }
-        76% {
-            opacity: 0;
-        }
-        77% {
-            opacity: 1;
-        }
-        82% {
-            opacity: 1;
-        }
-        86% {
-            opacity: 0;
-        }
-        87% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 1;
-        }
+    #div_about_me_p {
+        float: none;
+        width: 100%;
     }
     .div_skills {
         margin: 10px 30px;
