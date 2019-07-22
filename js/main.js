@@ -198,5 +198,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         });
     }
+    // Clicking light switches
+    const switch_on = document.getElementById("img_switch_on");
+    const switch_off = document.getElementById("img_switch_off");
+    const p_switch = document.getElementById("p_switch");
+    switch_on.addEventListener("click", f_switch_on);
+    //////////change colors
 
+    function f_switch_on() {
+        switch_on.removeEventListener("click", f_switch_on);
+        switch_on.style.display = "none";
+        switch_off.style.display = "block";
+        p_switch.innerHTML = "Włącz światło";
+        switch_off.addEventListener("click", f_switch_off);
+        ////////
+    }
+
+    function f_switch_off() {
+        switch_off.removeEventListener("click", f_switch_off);
+        switch_off.style.display = "none";
+        switch_on.style.display = "block";
+        p_switch.innerHTML = "Wyłącz światło";
+        switch_on.addEventListener("click", f_switch_on);
+        ///////
+    }
 });

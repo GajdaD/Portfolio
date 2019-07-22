@@ -136,6 +136,25 @@ header {
     margin-top: 10px;
     color: #FFFFFF;
     background-color: #2D3142;
+    height: 200px;
+    position: relative;
+}
+
+.img_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+#img_switch_off {
+    display: none;
+}
+
+#p_switch {
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
 }
 
 .p_info {
