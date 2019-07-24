@@ -271,10 +271,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // Working when div is visible
             if (gambitGalleryIsInView(tester)) {
                 if (flag_visible == false) {
-                    visible_height = window.pageYOffset;
+                    if (window.pageYOffset < 0) {
+                        visible_height = window.pageYOffset;
+                    } else {
+                        visible_height = window.pageYOffset + tester.getBoundingClientRect().top - window.innerHeight
+                    }
                     flag_visible = true;
                 }
-                //ctx.clearRect(0, 0, c.width, c.height);
                 actual_height = (((window.pageYOffset - visible_height) / window.innerHeight) * 100);
                 ctx.moveTo(0, 100);
                 actual_width = width_part * actual_height;
