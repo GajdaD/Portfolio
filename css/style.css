@@ -138,6 +138,7 @@ header {
     background-color: #2D3142;
     height: 200px;
     position: relative;
+    overflow: hidden;
 }
 
 .img_center {
@@ -227,6 +228,13 @@ header {
 
 .span_skills {
     font-size: 16px;
+}
+
+#div_scroll_script_inside {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    background-color: #33FF00;
 }
 
 #link_projects,

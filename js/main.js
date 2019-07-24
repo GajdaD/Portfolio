@@ -222,4 +222,67 @@ document.addEventListener("DOMContentLoaded", function(event) {
         switch_on.addEventListener("click", f_switch_on);
         ///////
     }
+    // The checker
+    const gambitGalleryIsInView = el => {
+        const scroll = window.scrollY || window.pageYOffset
+        const boundsTop = el.getBoundingClientRect().top + scroll
+
+        const viewport = {
+            top: scroll,
+            bottom: scroll + window.innerHeight,
+        }
+
+        const bounds = {
+            top: boundsTop,
+            bottom: boundsTop + el.clientHeight,
+        }
+
+        return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+            (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
+    }
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    c.width = window.innerWidth;
+    // requestAnimationFrame
+    const raf =
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60)
+        }
+        // Usage.
+    const tester = document.querySelector('#div_scroll_script')
+    const answer = document.querySelector('.answer')
+    let actual_width = 0;
+    let visible_height = 0;
+    let flag_visible = false;
+    let actual_height = 0;
+    let width_part = window.innerWidth / 100;
+    let window_resolution = window.innerWidth / window.innerHeight;
+    //console.log(c.scrollTop)
+    const handler = () => raf(() => {
+        //console.log(window.pageYOffset)
+
+        if (gambitGalleryIsInView(tester)) {
+            if (flag_visible == false) {
+                visible_height = window.pageYOffset;
+                flag_visible = true;
+            }
+            ctx.clearRect(0, 0, c.width, c.height);
+            actual_height = (((window.pageYOffset - visible_height) / window.innerHeight) * 100);
+            //console.log("Visible")
+
+            ctx.moveTo(0, 100);
+            actual_width = width_part * actual_height;
+            console.log(actual_width)
+            ctx.lineTo(actual_width, 100);
+            ctx.stroke();
+
+        }
+    })
+    handler()
+    window.addEventListener('scroll', handler)
+
+
 });
