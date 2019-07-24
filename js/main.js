@@ -233,26 +233,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function scrolling_function() {
         // The checker
         const gambitGalleryIsInView = el => {
-            const scroll = window.scrollY || window.pageYOffset
-            const boundsTop = el.getBoundingClientRect().top + scroll
+                const scroll = window.scrollY || window.pageYOffset
+                const boundsTop = el.getBoundingClientRect().top + scroll
 
-            const viewport = {
-                top: scroll,
-                bottom: scroll + window.innerHeight,
+                const viewport = {
+                    top: scroll,
+                    bottom: scroll + window.innerHeight,
+                }
+
+                const bounds = {
+                    top: boundsTop,
+                    bottom: boundsTop + el.clientHeight,
+                }
+
+                return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+                    (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
             }
-
-            const bounds = {
-                top: boundsTop,
-                bottom: boundsTop + el.clientHeight,
-            }
-
-            return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-                (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
-        }
-        var c = document.getElementById("canvas");
-        var ctx = c.getContext("2d");
-        c.width = window.innerWidth;
-        // Request animation frame
+            // Request animation frame
         const raf =
             window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
@@ -263,26 +260,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // Usage
         const tester = document.querySelector('#div_scroll_script')
         let actual_width = 0;
+        let actual_width_1 = 0;
+        let actual_width_2 = 0;
+        let actual_width_3 = 0;
         let visible_height = 0;
         let flag_visible = false;
-        let actual_height = 0;
+        let actual_height_percantage = 0;
         let width_part = window.innerWidth / 100;
+        const ball = document.getElementById("ball");
         const handler = () => raf(() => {
             // Working when div is visible
             if (gambitGalleryIsInView(tester)) {
                 if (flag_visible == false) {
                     if (window.pageYOffset < 0) {
-                        visible_height = window.pageYOffset;
+                        visible_height = window.pageYOffset + 100;
                     } else {
-                        visible_height = window.pageYOffset + tester.getBoundingClientRect().top - window.innerHeight
+                        visible_height = window.pageYOffset + tester.getBoundingClientRect().top - window.innerHeight + 100;
                     }
                     flag_visible = true;
                 }
-                actual_height = (((window.pageYOffset - visible_height) / window.innerHeight) * 100);
-                ctx.moveTo(0, 100);
-                actual_width = width_part * actual_height;
-                ctx.lineTo(actual_width, 100);
-                ctx.stroke();
+                actual_height_percantage = (((window.pageYOffset - visible_height) / window.innerHeight) * 100);
+                // ctx.moveTo(0, 100);
+                actual_width = width_part * actual_height_percantage;
+                // ctx.lineTo(actual_width, 100);
+                // ctx.stroke();
+                ball.style.left = actual_width + "px";
+
             }
         })
         handler()
