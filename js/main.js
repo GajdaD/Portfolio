@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         function move_right() {
             if (active == 0) {
                 slider_control_prev.addEventListener("click", move_left);
-                slider_control_prev.style.opacity = 0.8;
+                slider_control_prev.style.opacity = 0.9;
             }
 
             let elem_old = tab_images[active];
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         function move_left() {
             if (active == 2) {
                 slider_control_next.addEventListener("click", move_right);
-                slider_control_next.style.opacity = 0.8;
+                slider_control_next.style.opacity = 0.9;
             }
 
             let elem_old = tab_images[active];
