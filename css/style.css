@@ -337,7 +337,8 @@ header {
 }
 
 #div_contact_left {
-    width: 44%;
+    width: 40%;
+    height: 376px;
     float: left;
     padding: 4%;
     margin-right: 2%;
@@ -348,18 +349,22 @@ header {
 }
 
 #div_contact_right {
-    width: 44%;
+    width: 40%;
+    height: 376px;
     float: left;
     padding: 4%;
     border: 1px solid black;
     border-radius: 25px;
-    font-size: 24px;
+    font-size: 26px;
     box-shadow: 3px 6px 9px #000;
 }
 
 .p_indent {
-    margin-left: 16px;
-    font-size: 22px;
+    margin-left: 48px;
+}
+
+.contact_images {
+    width: 64px;
 }
 
 footer {
@@ -500,6 +505,7 @@ footer {
     }
     #div_contact_left {
         width: 80%;
+        height: min-content;
         float: none;
         padding: 7%;
         margin-right: 0%;
@@ -507,23 +513,35 @@ footer {
         border: 1px solid black;
         border-radius: 25px;
         font-size: 18px;
-        box-shadow: 3px 6px 9px #000;
+        box-shadow: 1% 2% 2% #000;
     }
     #div_contact_right {
         width: 80%;
+        height: min-content;
         float: none;
         padding: 7%;
         border: 1px solid black;
         border-radius: 25px;
-        font-size: 20px;
-        box-shadow: 1% 2% 3% #000;
+        font-size: 22px;
+        box-shadow: 1% 2% 2% #000;
         word-break: break-all;
     }
     .p_indent {
-        margin-left: 10px;
-        font-size: 18px;
+        margin-left: 48px;
     }
     footer {
         font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #div_contact_left {
+        font-size: 26px;
+    }
+    #div_contact_right {
+        font-size: 28px;
+    }
+    .p_indent {
+        margin-left: 64px;
     }
 }
