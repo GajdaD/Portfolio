@@ -126,7 +126,6 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
-    cursor: pointer;
 }
 
 #img_switch_off {
@@ -254,7 +253,6 @@ header {
     z-index: 1;
     display: none;
     transition: opacity 0.3s linear;
-    cursor: pointer;
 }
 
 .slider_images_clicked {
@@ -313,7 +311,6 @@ header {
     font-weight: 600;
     font-size: 32px;
     opacity: 0.9;
-    cursor: pointer;
     -webkit-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
 }
@@ -385,7 +382,6 @@ header {
     -webkit-transition: bottom 0.8s, width 0.8s, left 0.8s;
     transition: bottom 0.8s, width 0.8s, left 0.8s;
     display: none;
-    cursor: pointer;
 }
 
 .script_ballon_img_first {
