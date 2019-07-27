@@ -153,7 +153,6 @@ a {
 }
 
 #p_switch {
-    font-size: 20px;
     padding-top: 10px;
     text-align: center;
 }
@@ -396,7 +395,6 @@ a {
 #script_ballon_p {
     text-align: center;
     padding-top: 8px;
-    font-size: 20px;
 }
 
 #script_ballon_img_div {
@@ -664,6 +662,12 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
+    .p_font_size_big {
+        font-size: 36px;
+    }
+    .p_font_size_medium {
+        font-size: 30px;
+    }
     #div_contact_left {
         font-size: 26px;
     }
