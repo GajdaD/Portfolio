@@ -340,6 +340,7 @@ header {
     display: none;
     -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius 0.3s;
     transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius 0.3s;
+    transition-timing-function: ease-out;
     z-index: 2;
 }
 
@@ -380,6 +381,7 @@ header {
     -webkit-transition: bottom 0.8s, width 0.8s, left 0.8s;
     transition: bottom 0.8s, width 0.8s, left 0.8s;
     display: none;
+    cursor: pointer;
 }
 
 .script_ballon_img_first {

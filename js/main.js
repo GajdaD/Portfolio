@@ -149,6 +149,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             elem_old_clicked.style.display = "none";
             elem_old_clicked_top.style.display = "none";
             elem_old_clicked_bottom.style.display = "none";
+            slider_control_next.style.color = "#fff"
+            slider_control_next.style.backgroundColor = "#2a2a2a"
+            slider_control_prev.style.color = "#fff"
+            slider_control_prev.style.backgroundColor = "#2a2a2a"
             active++;
             if (active == elem_count) {
                 slider_control_next.removeEventListener("click", move_right)
@@ -173,6 +177,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             elem_old_clicked.style.display = "none";
             elem_old_clicked_top.style.display = "none";
             elem_old_clicked_bottom.style.display = "none";
+            slider_control_next.style.color = "#fff"
+            slider_control_next.style.backgroundColor = "#2a2a2a"
+            slider_control_prev.style.color = "#fff"
+            slider_control_prev.style.backgroundColor = "#2a2a2a"
             active--;
             if (active == 0) {
                 slider_control_prev.removeEventListener("click", move_left)
@@ -184,6 +192,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             tab_images[i].addEventListener("click", function() {
                 tab_images[i].classList.add("slider_images_hidden");
                 window.setTimeout(function() {
+                    slider_control_next.style.color = "#2a2a2a"
+                    slider_control_next.style.backgroundColor = "#fff"
+                    slider_control_prev.style.color = "#2a2a2a"
+                    slider_control_prev.style.backgroundColor = "#fff"
                     tab_images[i].style.display = "none";
                     tab_images[i].classList.remove("slider_images_hidden");
                     tab_images_clicked[i].style.display = "block";
@@ -305,37 +317,60 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_0");
                         //console.log(tab_balloons[balloon_run % 3].classList)
                         elem_balloon_p.style.display = "none";
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        setTimeout(function() {
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 300);
                         balloon_click++;
                         break;
                     }
                 case 1:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_1");
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        setTimeout(function() {
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 300);
                         balloon_click++;
                         break;
                     }
                 case 2:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_2");
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        setTimeout(function() {
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 300);
                         balloon_click++;
                         break;
                     }
                 case 3:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_3");
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        setTimeout(function() {
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 300);
                         balloon_click++;
                         break;
                     }
                 case 4:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_4");
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        setTimeout(function() {
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 300);
                         balloon_click++;
                         break;
                     }
                 case 5:
                     {
                         elem_balloon_bg[0].style.display = "block";
+                        //elem_balloon_bg[0].style.width = window.innerWidth + "px";
                         elem_balloon_bg[0].classList.add("div_balloon_bg_larger");
+
+                        document.getElementsByClassName
                         tab_balloons[balloon_run % 3].style.display = "none";
                         tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
                         tab_balloons[balloon_run % 3].classList.remove("script_ballon_img_larger_0", "script_ballon_img_larger_1", "script_ballon_img_larger_2", "script_ballon_img_larger_3", "script_ballon_img_larger_4")
@@ -347,11 +382,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             tab_balloons[balloon_run % 3].style.display = "block";
 
                             tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
-                        }, 700);
+                        }, 400);
                         setTimeout(function() {
                             elem_balloon_bg[0].style.display = "none";
                             elem_balloon_bg[0].classList.remove("div_balloon_bg_larger", "div_balloon_bg_slide_down");
-                        }, 1300);
+                        }, 1000);
                         break;
 
                     }
