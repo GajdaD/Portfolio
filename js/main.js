@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const elem_balloon_p = document.getElementById("script_ballon_p");
         const elem_balloon_bg = document.getElementsByClassName("div_balloon_bg");
         const tab_balloons = [elem_balloons[0], elem_balloons[1], elem_balloons[2]];
-        const tab_colors = ["green", "blue", "gray"];
+        const tab_colors = ["#00a551", "#3270eb", "#6a6a6a"];
         let balloon_run = 0;
 
         tab_balloons[0].addEventListener("click", f_click_balloon);
@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 case 0:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_0");
-                        console.log(tab_balloons[balloon_run % 3].classList)
+                        //console.log(tab_balloons[balloon_run % 3].classList)
                         elem_balloon_p.style.display = "none";
                         balloon_click++;
                         break;
@@ -347,11 +347,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             tab_balloons[balloon_run % 3].style.display = "block";
 
                             tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
-                        }, 400);
+                        }, 700);
                         setTimeout(function() {
                             elem_balloon_bg[0].style.display = "none";
                             elem_balloon_bg[0].classList.remove("div_balloon_bg_larger", "div_balloon_bg_slide_down");
-                        }, 1000);
+                        }, 1300);
                         break;
 
                     }
