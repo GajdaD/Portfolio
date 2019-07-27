@@ -260,14 +260,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // Usage
         const tester = document.querySelector('#div_scroll_script')
         let actual_width = 0;
-        let actual_width_1 = 0;
-        let actual_width_2 = 0;
-        let actual_width_3 = 0;
         let visible_height = 0;
         let flag_visible = false;
         let actual_height_percantage = 0;
         let width_part = window.innerWidth / 100;
-        const ball = document.getElementById("ball");
+        const scroll_boat = document.getElementById("scroll_boat");
         const handler = () => raf(() => {
             // Working when div is visible
             if (gambitGalleryIsInView(tester)) {
@@ -280,11 +277,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     flag_visible = true;
                 }
                 actual_height_percantage = (((window.pageYOffset - visible_height) / window.innerHeight) * 100);
-                // ctx.moveTo(0, 100);
                 actual_width = width_part * actual_height_percantage;
-                // ctx.lineTo(actual_width, 100);
-                // ctx.stroke();
-                ball.style.left = actual_width + "px";
+                scroll_boat.style.left = actual_width + "px";
 
             }
         })
@@ -292,4 +286,45 @@ document.addEventListener("DOMContentLoaded", function(event) {
         window.addEventListener('scroll', handler)
     }
     scrolling_function();
+
+    function balloon_script() {
+        const elem_balloons = document.getElementsByClassName("script_ballon_img");
+        const tab_balloons = [elem_balloons[0], elem_balloons[1], elem_balloons[2]];
+
+        tab_balloons[0].addEventListener("click", f_click_balloon);
+        let balloon_click = 0;
+
+        function f_click_balloon() {
+            switch (balloon_click) {
+                case 0:
+                    {
+                        tab_balloons[0].classList.add("script_ballon_img_larger_0");
+                        balloon_click++;
+                        break;
+                    }
+                case 1:
+                    {
+                        tab_balloons[0].classList.add("script_ballon_img_larger_1");
+                        balloon_click++;
+                        break;
+                    }
+                case 2:
+                    {
+                        tab_balloons[0].classList.add("script_ballon_img_larger_2");
+                        balloon_click++;
+                        break;
+                    }
+                case 3:
+                    {
+                        tab_balloons[0].classList.add("script_ballon_img_larger_3");
+                        balloon_click++;
+                        break;
+                    }
+
+
+            }
+
+        }
+    }
+    balloon_script();
 });
