@@ -292,6 +292,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const elem_balloon_p = document.getElementById("script_ballon_p");
         const elem_balloon_bg = document.getElementsByClassName("div_balloon_bg");
         const tab_balloons = [elem_balloons[0], elem_balloons[1], elem_balloons[2]];
+        const tab_colors = ["green", "blue", "gray"];
+        let balloon_run = 0;
 
         tab_balloons[0].addEventListener("click", f_click_balloon);
         let balloon_click = 0;
@@ -300,32 +302,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
             switch (balloon_click) {
                 case 0:
                     {
-                        tab_balloons[0].classList.add("script_ballon_img_larger_0");
+                        tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_0");
+                        console.log(tab_balloons[balloon_run % 3].classList)
                         elem_balloon_p.style.display = "none";
                         balloon_click++;
                         break;
                     }
                 case 1:
                     {
-                        tab_balloons[0].classList.add("script_ballon_img_larger_1");
+                        tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_1");
                         balloon_click++;
                         break;
                     }
                 case 2:
                     {
-                        tab_balloons[0].classList.add("script_ballon_img_larger_2");
+                        tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_2");
                         balloon_click++;
                         break;
                     }
                 case 3:
                     {
-                        tab_balloons[0].classList.add("script_ballon_img_larger_3");
+                        tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_3");
                         balloon_click++;
                         break;
                     }
                 case 4:
                     {
-                        tab_balloons[0].classList.add("script_ballon_img_larger_4");
+                        tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_4");
                         balloon_click++;
                         break;
                     }
@@ -333,11 +336,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     {
                         elem_balloon_bg[0].style.display = "block";
                         elem_balloon_bg[0].classList.add("div_balloon_bg_larger");
-                        tab_balloons[0].style.display = "none";
-                        balloon_click++;
+                        tab_balloons[balloon_run % 3].style.display = "none";
+                        tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
+                        tab_balloons[balloon_run % 3].classList.remove("script_ballon_img_larger_0", "script_ballon_img_larger_1", "script_ballon_img_larger_2", "script_ballon_img_larger_3", "script_ballon_img_larger_4")
+                        elem_balloon_bg[0].style.backgroundColor = tab_colors[balloon_run % 3];
+                        balloon_click = 0;
+                        balloon_run++;
                         setTimeout(function() {
                             elem_balloon_bg[0].classList.add("div_balloon_bg_slide_down");
-                        }, 600);
+                            tab_balloons[balloon_run % 3].style.display = "block";
+
+                            tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
+                        }, 400);
+                        setTimeout(function() {
+                            elem_balloon_bg[0].style.display = "none";
+                            elem_balloon_bg[0].classList.remove("div_balloon_bg_larger", "div_balloon_bg_slide_down");
+                        }, 1000);
                         break;
 
                     }
