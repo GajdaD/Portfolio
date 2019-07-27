@@ -344,10 +344,15 @@ header {
 
 .div_balloon_bg_larger {
     width: 100%;
-    height: 256px;
-    top: -28px;
+    height: 200px;
+    top: 0px;
     left: 0;
     border-radius: 0;
+}
+
+.div_balloon_bg_slide_down {
+    top: 200px;
+    transition: top 0.8s;
 }
 
 #script_ballon_p {

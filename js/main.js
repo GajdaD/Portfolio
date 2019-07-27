@@ -335,7 +335,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         elem_balloon_bg[0].classList.add("div_balloon_bg_larger");
                         tab_balloons[0].style.display = "none";
                         balloon_click++;
+                        setTimeout(function() {
+                            elem_balloon_bg[0].classList.add("div_balloon_bg_slide_down");
+                        }, 1000);
                         break;
+
                     }
 
 
