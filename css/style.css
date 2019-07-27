@@ -17,23 +17,17 @@ body {
 
 main {
     font-family: 'Sansita', sans-serif;
-    background-color: #BFC0C0;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    font-style: italic;
-    color: orangered;
+    background-color: #F5F5F5;
+    /* background-image: linear-gradient(to bottom right, #41D9D9, #11BF7F); */
 }
 
 header {
     width: 100%;
     text-align: center;
     font-size: 32px;
-    color: #FFFFFF;
+    color: #FF5000;
     font-weight: bold;
-    background-color: #EF8354;
+    background-color: #F5F5F5;
 }
 
 #div_mobile_menu {
@@ -80,9 +74,10 @@ header {
 #div_menu ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #333;
+    background-color: #010101;
     text-align: center;
     width: 100%;
+    border-bottom: 3px solid #ffffff;
 }
 
 #div_menu li {
@@ -92,25 +87,29 @@ header {
 
 #div_menu li a {
     display: block;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 #div_menu li a:hover {
-    background-color: #111;
+    background-color: #1b266d;
 }
 
 .div_info {
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
-    color: #FFFFFF;
-    background-color: #4F5D75;
+    margin-bottom: 30px;
+    color: #666666;
+    background-color: #ffffff;
     min-width: 260px;
     overflow: auto;
     padding: 50px 0px;
+    margin-bottom: 30px;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
 }
 
 #div_about_me_p {
@@ -121,11 +120,25 @@ header {
 .div_inset {
     width: 100%;
     margin-top: 10px;
-    color: #FFFFFF;
-    background-color: #2D3142;
+    margin-bottom: 30px;
+    color: #333333;
+    background-color: #ffffff;
     height: 200px;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-style: italic;
+    color: #FF5000;
+}
+
+.span_second_color {
+    color: #FF5000;
 }
 
 .img_center {
@@ -467,9 +480,9 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: bold;
-    background-color: #EF8354;
+    background-color: #FF5000;
     margin-top: 20px;
 }
 
@@ -479,6 +492,9 @@ footer {
         font-size: 32px;
         width: 90%;
         padding-left: 10%;
+    }
+    .div_info {
+        width: 100%;
     }
     #nav_mobile_menu {
         display: block;
@@ -493,7 +509,7 @@ footer {
         width: 80%;
         font-size: 32px;
         float: left;
-        background-color: #EF8354;
+        background-color: #1543f0;
         height: 64px;
         text-align: center;
         vertical-align: middle;
@@ -502,7 +518,7 @@ footer {
     #mobile_menu_close {
         width: 20%;
         float: left;
-        background-color: #EF8354;
+        background-color: #1543f0;
         height: 64px;
     }
     #mobile_menu_img_close {
