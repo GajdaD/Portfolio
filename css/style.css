@@ -29,6 +29,10 @@ header {
     background-color: #F5F5F5;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 #div_mobile_menu {
     display: none;
     opacity: 0;
@@ -500,6 +504,9 @@ footer {
         font-size: 32px;
         width: 90%;
         padding-left: 10%;
+    }
+    .cursor {
+        cursor: default;
     }
     .div_info {
         width: 100%;
