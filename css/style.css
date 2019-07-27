@@ -108,8 +108,6 @@ header {
     overflow: auto;
     padding: 50px 0px;
     margin-bottom: 30px;
-    border-top: 1px solid #666666;
-    border-bottom: 1px solid #666666;
 }
 
 #div_about_me_p {
@@ -172,13 +170,24 @@ a {
     padding-bottom: 30px;
     width: 90%;
     margin: 0 auto;
+    color: #FF5000;
+    font-weight: bold;
 }
 
 .p_font_left {
     text-align: left;
+    font-size: 30px;
+    padding-bottom: 30px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .p_font_size_medium {
+    color: #FF5000;
+    font-size: 24px;
+}
+
+.p_font_size_medium_menu {
     font-size: 24px;
 }
 
@@ -495,6 +504,8 @@ footer {
     }
     .div_info {
         width: 100%;
+        border-top: 1px solid #666666;
+        border-bottom: 1px solid #666666;
     }
     #nav_mobile_menu {
         display: block;
