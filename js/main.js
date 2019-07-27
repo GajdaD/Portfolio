@@ -149,10 +149,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             elem_old_clicked.style.display = "none";
             elem_old_clicked_top.style.display = "none";
             elem_old_clicked_bottom.style.display = "none";
-            slider_control_next.style.color = "#fff"
-            slider_control_next.style.backgroundColor = "#2a2a2a"
-            slider_control_prev.style.color = "#fff"
-            slider_control_prev.style.backgroundColor = "#2a2a2a"
+            slider_control_next.style.color = "#F5F5F5"
+            slider_control_next.style.backgroundColor = "#333333"
+            slider_control_prev.style.color = "#F5F5F5"
+            slider_control_prev.style.backgroundColor = "#333333"
             active++;
             if (active == elem_count) {
                 slider_control_next.removeEventListener("click", move_right)
@@ -177,10 +177,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             elem_old_clicked.style.display = "none";
             elem_old_clicked_top.style.display = "none";
             elem_old_clicked_bottom.style.display = "none";
-            slider_control_next.style.color = "#fff"
-            slider_control_next.style.backgroundColor = "#2a2a2a"
-            slider_control_prev.style.color = "#fff"
-            slider_control_prev.style.backgroundColor = "#2a2a2a"
+            slider_control_next.style.color = "#F5F5F5"
+            slider_control_next.style.backgroundColor = "#333333"
+            slider_control_prev.style.color = "#F5F5F5"
+            slider_control_prev.style.backgroundColor = "#333333"
             active--;
             if (active == 0) {
                 slider_control_prev.removeEventListener("click", move_left)
@@ -192,10 +192,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             tab_images[i].addEventListener("click", function() {
                 tab_images[i].classList.add("slider_images_hidden");
                 window.setTimeout(function() {
-                    slider_control_next.style.color = "#2a2a2a"
-                    slider_control_next.style.backgroundColor = "#fff"
-                    slider_control_prev.style.color = "#2a2a2a"
-                    slider_control_prev.style.backgroundColor = "#fff"
+                    slider_control_next.style.color = "#333333"
+                    slider_control_next.style.backgroundColor = "#F5F5F5"
+                    slider_control_prev.style.color = "#333333"
+                    slider_control_prev.style.backgroundColor = "#F5F5F5"
                     tab_images[i].style.display = "none";
                     tab_images[i].classList.remove("slider_images_hidden");
                     tab_images_clicked[i].style.display = "block";
@@ -301,7 +301,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function balloon_script() {
         const elem_balloons = document.getElementsByClassName("script_ballon_img");
-        const elem_balloon_p = document.getElementById("script_ballon_p");
         const elem_balloon_bg = document.getElementsByClassName("div_balloon_bg");
         const tab_balloons = [elem_balloons[0], elem_balloons[1], elem_balloons[2]];
         const tab_colors = ["#00a551", "#3270eb", "#6a6a6a"];
@@ -315,8 +314,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 case 0:
                     {
                         tab_balloons[balloon_run % 3].classList.add("script_ballon_img_larger_0");
-                        //console.log(tab_balloons[balloon_run % 3].classList)
-                        elem_balloon_p.style.display = "none";
                         tab_balloons[balloon_run % 3].removeEventListener("click", f_click_balloon);
                         setTimeout(function() {
                             tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
