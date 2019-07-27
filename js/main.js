@@ -289,6 +289,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function balloon_script() {
         const elem_balloons = document.getElementsByClassName("script_ballon_img");
+        const elem_balloon_p = document.getElementById("script_ballon_p");
+        const elem_balloon_bg = document.getElementsByClassName("div_balloon_bg");
         const tab_balloons = [elem_balloons[0], elem_balloons[1], elem_balloons[2]];
 
         tab_balloons[0].addEventListener("click", f_click_balloon);
@@ -299,6 +301,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 case 0:
                     {
                         tab_balloons[0].classList.add("script_ballon_img_larger_0");
+                        elem_balloon_p.style.display = "none";
                         balloon_click++;
                         break;
                     }
@@ -317,6 +320,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 case 3:
                     {
                         tab_balloons[0].classList.add("script_ballon_img_larger_3");
+                        balloon_click++;
+                        break;
+                    }
+                case 4:
+                    {
+                        tab_balloons[0].classList.add("script_ballon_img_larger_4");
+                        balloon_click++;
+                        break;
+                    }
+                case 5:
+                    {
+                        elem_balloon_bg[0].style.display = "block";
+                        elem_balloon_bg[0].classList.add("div_balloon_bg_larger");
+                        tab_balloons[0].style.display = "none";
                         balloon_click++;
                         break;
                     }
