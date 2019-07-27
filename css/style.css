@@ -20,6 +20,13 @@ main {
     background-color: #BFC0C0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    font-style: italic;
+    color: orangered;
+}
+
 header {
     width: 100%;
     text-align: center;
