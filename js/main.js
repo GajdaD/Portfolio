@@ -382,18 +382,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             tab_balloons[balloon_run % 3].style.display = "block";
 
                             tab_balloons[balloon_run % 3].addEventListener("click", f_click_balloon);
-                        }, 400);
+                        }, 300);
                         setTimeout(function() {
                             elem_balloon_bg[0].style.display = "none";
                             elem_balloon_bg[0].classList.remove("div_balloon_bg_larger", "div_balloon_bg_slide_down");
-                        }, 1000);
+                        }, 900);
                         break;
-
                     }
-
-
             }
-
         }
     }
     balloon_script();
