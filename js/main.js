@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         balloon_click++;
                         setTimeout(function() {
                             elem_balloon_bg[0].classList.add("div_balloon_bg_slide_down");
-                        }, 1000);
+                        }, 600);
                         break;
 
                     }
