@@ -219,16 +219,70 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const switch_on = document.getElementById("img_switch_on");
         const switch_off = document.getElementById("img_switch_off");
         const p_switch = document.getElementById("p_switch");
+        const el_main = document.getElementsByTagName("main");
+        const el_header = document.getElementsByTagName("header");
+        const el_animation_mobile_menu = document.getElementById("animation_mobile_menu");
+        const el_animation_mobile_menu_out = document.getElementById("animation_mobile_menu_out");
+        const el_div_info = document.getElementsByClassName("div_info");
+        const el_div_inset = document.getElementsByClassName("div_inset");
+        const el_ul_menu = document.getElementById("ul_menu");
+        const el_a_menu = document.getElementsByClassName("first_color");
+        const el_div_skills = document.getElementsByClassName("div_skills");
+        const el_slider_control_prev = document.getElementById("slider_control_prev");
+        const el_slider_control_next = document.getElementById("slider_control_next");
+        const el_div_contact_left = document.getElementById("div_contact_left");
+        const el_div_contact_right = document.getElementById("div_contact_right");
+        const el_footer = document.getElementsByTagName("footer");
+        const el_mobile_menu_title_span = document.getElementById("mobile_menu_title_span");
+        const el_mobile_menu_close = document.getElementById("mobile_menu_close");
+        const el_div_mobile_menu_center = document.getElementById("div_mobile_menu_center");
+        const el_ul_menu_mobile = document.getElementById("ul_menu_mobile");
+        const el_a_menu_mobile = document.getElementsByClassName("a_menu_mobile");
+
         switch_on.addEventListener("click", f_switch_on);
-        //////////change colors
 
         function f_switch_on() {
             switch_on.removeEventListener("click", f_switch_on);
             switch_on.style.display = "none";
             switch_off.style.display = "block";
             p_switch.innerHTML = "Włącz światło";
+
+            el_main[0].style.backgroundColor = "#666666";
+            el_header[0].style.backgroundColor = "#666666";
+            el_animation_mobile_menu.style.backgroundColor = "#666666";
+            el_animation_mobile_menu_out.style.backgroundColor = "#666666";
+            for (let i = 0; i < el_div_info.length; i++) {
+                el_div_info[i].style.backgroundColor = "#333333";
+                el_div_info[i].style.color = "#FFFFFF";
+                // el_div_info[i].style.borderColor = "#FFFFFF";
+            }
+            for (let i = 0; i < el_div_inset.length; i++) {
+                el_div_inset[i].style.backgroundColor = "#333333";
+                el_div_inset[i].style.color = "#F5F5F5";
+                // el_div_inset[i].style.borderColor = "#FFFFFF";
+            }
+            el_ul_menu.style.backgroundColor = "#FFFFFF";
+            for (let i = 0; i < el_a_menu.length; i++) {
+                el_a_menu[i].classList.add("second_color");
+            }
+            for (let i = 0; i < el_div_skills.length; i++) {
+                el_div_skills[i].style.borderColor = "#FFFFFF";
+            }
+            el_slider_control_prev.style.borderColor = "#FFFFFF";
+            el_slider_control_next.style.borderColor = "#FFFFFF";
+            el_div_contact_left.style.borderColor = "#FFFFFF";
+            el_div_contact_right.style.borderColor = "#FFFFFF";
+            el_footer[0].style.color = "#333333";
+            el_mobile_menu_title_span.style.backgroundColor = "#666666";
+            el_mobile_menu_close.style.backgroundColor = "#666666";
+            el_div_mobile_menu_center.style.backgroundColor = "#333333";
+            el_ul_menu_mobile.style.backgroundColor = "#333333";
+            el_ul_menu_mobile.style.color = "#FFFFFF";
+            for (let i = 0; i < el_a_menu_mobile.length; i++) {
+                el_a_menu_mobile[i].style.color = "#FFFFFF";
+            }
+
             switch_off.addEventListener("click", f_switch_off);
-            ////////
         }
 
         function f_switch_off() {
@@ -236,6 +290,40 @@ document.addEventListener("DOMContentLoaded", function(event) {
             switch_off.style.display = "none";
             switch_on.style.display = "block";
             p_switch.innerHTML = "Wyłącz światło";
+
+            el_main[0].style.backgroundColor = "#F5F5F5";
+            el_header[0].style.backgroundColor = "#F5F5F5";
+            el_animation_mobile_menu.style.backgroundColor = "#F5F5F5";
+            el_animation_mobile_menu_out.style.backgroundColor = "#F5F5F5";
+            for (let i = 0; i < el_div_info.length; i++) {
+                el_div_info[i].style.backgroundColor = "#FFFFFF";
+                el_div_info[i].style.color = "#666666";
+            }
+            for (let i = 0; i < el_div_inset.length; i++) {
+                el_div_inset[i].style.backgroundColor = "#FFFFFF";
+                el_div_inset[i].style.color = "#666666";
+            }
+            el_ul_menu.style.backgroundColor = "#333333";
+            for (let i = 0; i < el_a_menu.length; i++) {
+                el_a_menu[i].classList.remove("second_color");
+            }
+            for (let i = 0; i < el_div_skills.length; i++) {
+                el_div_skills[i].style.borderColor = "#333333";
+            }
+            el_slider_control_prev.style.borderColor = "#333333";
+            el_slider_control_next.style.borderColor = "#333333";
+            el_div_contact_left.style.borderColor = "#333333";
+            el_div_contact_right.style.borderColor = "#333333";
+            el_footer[0].style.color = "#FFFFFF";
+            el_mobile_menu_title_span.style.backgroundColor = "#F5F5F5";
+            el_mobile_menu_close.style.backgroundColor = "#F5F5F5";
+            el_div_mobile_menu_center.style.backgroundColor = "#FFFFFF";
+            el_ul_menu_mobile.style.backgroundColor = "#FFFFFF";
+            el_ul_menu_mobile.style.color = "#333333";
+            for (let i = 0; i < el_a_menu_mobile.length; i++) {
+                el_a_menu_mobile[i].style.color = "#333333";
+            }
+
             switch_on.addEventListener("click", f_switch_on);
             ///////
         }
