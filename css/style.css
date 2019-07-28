@@ -500,6 +500,12 @@ a {
     margin-left: 48px;
 }
 
+.p_mail {
+    margin-left: 16px;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
 .contact_images {
     width: 64px;
 }
@@ -676,6 +682,11 @@ footer {
     .p_indent {
         margin-left: 48px;
     }
+    .p_mail {
+        margin-left: 10px;
+        font-size: 15px;
+        margin-top: 8px;
+    }
     footer {
         font-size: 14px;
     }
@@ -696,6 +707,11 @@ footer {
     }
     .p_indent {
         margin-left: 64px;
+    }
+    .p_mail {
+        margin-left: 48px;
+        font-size: 26px;
+        margin-top: 24px;
     }
     .contact_images {
         width: 76px;
