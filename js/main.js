@@ -122,8 +122,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const tableImagesClick = [elementClick[0], elementClick[1], elementClick[2]];
         const tableImagesClickTop = [elementClickTop[0], elementClickTop[1], elementClickTop[2]];
         const tableImagesClickBottom = [elementClickBottom[0], elementClickBottom[1], elementClickBottom[2]];
-        const tableTopLinks = ["https://github.com/GajdaD/WayToFortune", "https://github.com/GajdaD/Ball-game", "https://github.com/GajdaD/Memory-game"];
-        const tableBottomLinks = ["http://waytofortune.epizy.com/index.php", "https://gajdad.github.io/Ball-game/", "https://gajdad.github.io/Memory-game/"]
+        const tableTopLinks = ["https://github.com/GajdaD/Ball-game", "https://github.com/GajdaD/Memory-game", "https://github.com/GajdaD/WayToFortune"];
+        const tableBottomLinks = ["https://gajdad.github.io/Ball-game/", "https://gajdad.github.io/Memory-game/", "http://waytofortune.epizy.com/index.php"]
         let activeSlide = 0;
         const countElements = 2; // 0,1,2
 
