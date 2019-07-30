@@ -6,37 +6,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("nav_mobile_menu").removeEventListener("click", mobileMenuPopUp);
         let width = 0
         let opacity = 0;
-        let intervalAnimation = setInterval(intervalAnimationFunction, 5);
         document.getElementById("animation_mobile_menu").style.display = "block";
         document.getElementById("div_mobile_menu").style.display = "block";
         document.getElementById("nav_mobile_menu").style.display = "none";
 
-        function intervalAnimationFunction() {
-            width += 2;
+        const menuAnimation = () => {
+            width += 2.5;
             document.getElementById("animation_mobile_menu").style.width = width + "%";
             document.getElementById("animation_mobile_menu").style.height = width + "%";
             if (width >= 100) {
                 opacity += 0.04;
                 document.getElementById("div_mobile_menu").style.opacity = opacity;
-
             }
-            if (opacity >= 1) {
-                clearInterval(intervalAnimation);
+            if (opacity < 1) {
+                requestAnimationFrame(menuAnimation)
+            } else {
                 document.getElementById("mobile_menu_img_close").addEventListener("click", mobileMenuShiftAway)
             }
         }
+        menuAnimation();
     };
     // Mobile menu shift away - close button
     function mobileMenuShiftAway() {
         document.getElementById("mobile_menu_img_close").removeEventListener("click", mobileMenuShiftAway);
         let width = 100;
         let opacity = 1;
-        let intervalAnimation = setInterval(intervalAnimationFunction, 5);
         let flag = true;
         document.getElementById("animation_mobile_menu_out").style.display = "block";
-
-        function intervalAnimationFunction() {
-
+        const menuAnimation = () => {
             opacity -= 0.04;
             document.getElementById("div_mobile_menu").style.opacity = opacity;
             if (opacity <= 0) {
@@ -45,18 +42,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     flag = false;
                 }
 
-                width -= 2;
+                width -= 2.5;
                 document.getElementById("animation_mobile_menu_out").style.width = width + "%";
                 document.getElementById("animation_mobile_menu_out").style.height = width + "%";
             }
-            if (width <= 0) {
-                clearInterval(intervalAnimation);
+            if (width > 0) {
+                requestAnimationFrame(menuAnimation)
+
+            } else {
                 document.getElementById("div_mobile_menu").style.display = "none";
                 document.getElementById("nav_mobile_menu").style.display = "block";
                 document.getElementById("animation_mobile_menu_out").style.display = "none";
                 document.getElementById("nav_mobile_menu").addEventListener("click", mobileMenuPopUp);
             }
         }
+        menuAnimation();
     };
     // Mobile menu shift away - click link
     function mobileMenuShiftAwayLink() {
@@ -97,21 +97,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }, false);
     };
     scrollStop(function() {
-        let animation = setInterval(intervalAnimationFunction, 5);
-
         let elementMobileNav = document.getElementById("nav_mobile_center").style.width;
         let mobileNavWidth = elementMobileNav.slice(0, -1);
 
-        function intervalAnimationFunction() {
+        const animation = () => {
             elementMobileNav = document.getElementById("nav_mobile_center").style.width;
             mobileNavWidth = elementMobileNav.slice(0, -1);
             if (mobileNavWidth < 100) {
                 mobileNavWidth++;
                 document.getElementById("nav_mobile_center").style.width = mobileNavWidth + "%";
-            } else {
-                clearInterval(animation)
+                requestAnimationFrame(animation)
             }
         }
+        animation();
+
     });
     //Slider navigation
     function slider() {
@@ -326,7 +325,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
 
             elementSwitchOn.addEventListener("click", functionSwitchOn);
-            ///////
         }
     }
     switchLight();

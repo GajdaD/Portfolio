@@ -5,19 +5,19 @@
     line-height: 1.4em;
     vertical-align: baseline;
     text-decoration: none;
-    outline: 0;
+    outline: 0
 }
 
 html,
 body {
     width: 100%;
     height: 100%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 main {
     font-family: 'Sansita', sans-serif;
-    background-color: #F5F5F5;
+    background-color: #F5F5F5
 }
 
 header {
@@ -25,18 +25,18 @@ header {
     text-align: center;
     font-size: 32px;
     color: #FF5000;
-    font-weight: bold;
-    background-color: #F5F5F5;
+    font-weight: 700;
+    background-color: #F5F5F5
 }
 
 .cursor {
-    cursor: pointer;
+    cursor: pointer
 }
 
 #div_mobile_menu {
     display: none;
     opacity: 0;
-    z-index: 3;
+    z-index: 3
 }
 
 #animation_mobile_menu {
@@ -47,7 +47,7 @@ header {
     background-color: #F5F5F5;
     position: fixed;
     right: 0;
-    z-index: 3;
+    z-index: 3
 }
 
 #animation_mobile_menu_out {
@@ -58,57 +58,56 @@ header {
     background-color: #F5F5F5;
     position: fixed;
     right: 0;
-    z-index: 3;
+    z-index: 3
 }
 
 #nav_mobile_menu {
     display: none;
-    z-index: 5;
+    z-index: 5
 }
 
 #div_menu {
     position: sticky;
     position: -webkit-sticky;
-    /* Safari */
     top: 0;
-    z-index: 5;
+    z-index: 5
 }
 
 #div_menu ul {
     list-style-type: none;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #333;
     text-align: center;
-    width: 100%;
+    width: 100%
 }
 
 #div_menu li {
     float: left;
-    width: 25%;
+    width: 25%
 }
 
 .first_color {
     display: block;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .first_color:hover {
-    background-color: #666666;
+    background-color: #666
 }
 
 .second_color {
     display: block;
-    color: #333333;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .second_color:hover {
-    background-color: #F5F5F5;
+    background-color: #F5F5F5
 }
 
 .div_info {
@@ -116,63 +115,63 @@ header {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 30px;
-    color: #666666;
-    background-color: #ffffff;
+    color: #666;
+    background-color: #fff;
     min-width: 260px;
     overflow: auto;
-    padding: 50px 0px;
-    margin-bottom: 30px;
+    padding: 50px 0;
+    margin-bottom: 30px
 }
 
 #div_about_me_p {
     margin: 0 auto;
-    width: 60%;
+    width: 60%
 }
 
 .div_inset {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 30px;
-    color: #333333;
-    background-color: #ffffff;
+    color: #333;
+    background-color: #fff;
     height: 200px;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid #333333;
-    border-bottom: 1px solid #333333;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333
 }
 
 a {
     color: inherit;
     text-decoration: none;
     font-style: italic;
-    color: #FF5000;
+    color: #FF5000
 }
 
 .a_underline {
     border-bottom: 2px solid currentColor;
     display: inline-block;
-    line-height: 0.85;
+    line-height: .85
 }
 
 .span_second_color {
-    color: #FF5000;
+    color: #FF5000
 }
 
 .img_center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 30px;
+    padding-top: 30px
 }
 
 #img_switch_off {
-    display: none;
+    display: none
 }
 
 #p_switch {
     padding-top: 10px;
-    text-align: center;
+    text-align: center
 }
 
 .p_info {
@@ -180,7 +179,7 @@ a {
     padding-bottom: 10px;
     width: 90%;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 20px
 }
 
 .p_font_size_big {
@@ -190,7 +189,7 @@ a {
     width: 90%;
     margin: 0 auto;
     color: #FF5000;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .p_font_left {
@@ -198,20 +197,20 @@ a {
     font-size: 30px;
     padding-bottom: 30px;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .p_font_size_medium {
     color: #FF5000;
-    font-size: 24px;
+    font-size: 24px
 }
 
 .p_font_size_medium_menu {
-    font-size: 24px;
+    font-size: 24px
 }
 
 #div_umiejetnosci {
-    padding-bottom: 16px;
+    padding-bottom: 16px
 }
 
 #div_skills_box {
@@ -222,30 +221,30 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    align-content: center;
+    align-content: center
 }
 
 .div_skills {
     width: 240px;
     margin: 0 auto;
     display: table;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 25px;
     flex: 0 0 auto;
     margin: 40px;
-    box-shadow: 3px 6px 9px #333333;
-    padding: 10px;
+    box-shadow: 3px 6px 9px #333;
+    padding: 10px
 }
 
 .div_skills_img {
     width: 50%;
     float: left;
-    height: 128px;
+    height: 128px
 }
 
 .img_skills {
     height: 110px;
-    margin-top: 9px;
+    margin-top: 9px
 }
 
 .div_skills_p {
@@ -253,35 +252,35 @@ a {
     float: left;
     text-align: center;
     overflow: auto;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .span_skills_title {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .span_skills {
-    font-size: 16px;
+    font-size: 16px
 }
 
 #div_scroll_script_inside {
     width: 100%;
     height: 180px;
     margin-top: 10px;
-    background-image: url("../img/img_background_lake.png");
-    background-repeat: repeat-x;
+    background-image: url(../img/img_background_lake.png);
+    background-repeat: repeat-x
 }
 
 #link_projects,
 #link_contact {
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 #div_slider {
     width: 90%;
     overflow: hidden;
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 #slider_main {
@@ -290,7 +289,7 @@ a {
     overflow: hidden;
     display: inline-block;
     position: relative;
-    text-align: center;
+    text-align: center
 }
 
 .slider_images {
@@ -300,7 +299,7 @@ a {
     object-fit: contain;
     z-index: 1;
     display: none;
-    transition: opacity 0.3s linear;
+    transition: opacity .3s linear
 }
 
 .slider_images_clicked {
@@ -309,11 +308,11 @@ a {
     height: 100%;
     object-fit: contain;
     z-index: 1;
-    display: none;
+    display: none
 }
 
 .slider_images_hidden {
-    opacity: 0;
+    opacity: 0
 }
 
 .slider_click_top {
@@ -327,7 +326,7 @@ a {
     height: 25%;
     max-width: 420px;
     min-width: 260px;
-    display: none;
+    display: none
 }
 
 .slider_click_bottom {
@@ -341,7 +340,7 @@ a {
     height: 25%;
     max-width: 420px;
     min-width: 260px;
-    display: none;
+    display: none
 }
 
 #slider_control_prev,
@@ -353,30 +352,30 @@ a {
     padding: 6% 4.5%;
     width: auto;
     height: auto;
-    background-color: #333333;
+    background-color: #333;
     color: #F5F5F5;
     text-decoration: none;
     font-weight: 600;
     font-size: 32px;
-    opacity: 0.9;
+    opacity: .9;
     -webkit-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
-    border: 3px solid #333333;
+    border: 3px solid #333
 }
 
 #slider_control_prev:hover,
 #slider_control_next:hover {
     opacity: 1;
-    background-color: #3d3d3d;
+    background-color: #3d3d3d
 }
 
 #slider_control_prev {
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0
 }
 
 #slider_control_next {
     right: 0;
-    border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px
 }
 
 .div_balloon_bg {
@@ -388,38 +387,38 @@ a {
     left: calc(50% - 64px);
     border-radius: 50%;
     display: none;
-    -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius 0.3s;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius 0.3s;
+    -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius .3s;
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius .3s;
     transition-timing-function: ease-out;
-    z-index: 2;
+    z-index: 2
 }
 
 .div_balloon_bg_larger {
     width: 100%;
     height: 200px;
-    top: 0px;
+    top: 0;
     left: 0;
-    border-radius: 0;
+    border-radius: 0
 }
 
 .div_balloon_bg_slide_down {
     top: 200px;
     border-radius: 50%/100px 100px 0 0;
-    -webkit-transition: top 0.6s, border-radius 0.4s;
-    transition: top 0.6s, border-radius 0.4s;
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -webkit-transition: top 0.6s, border-radius .4s;
+    transition: top 0.6s, border-radius .4s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1)
 }
 
 #script_ballon_p {
     text-align: center;
-    padding-top: 8px;
+    padding-top: 8px
 }
 
 #script_ballon_img_div {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 50%
 }
 
 .script_ballon_img {
@@ -427,50 +426,50 @@ a {
     bottom: 5px;
     left: calc(50% - 32px);
     width: 64px;
-    -webkit-transition: bottom 0.8s, width 0.8s, left 0.8s;
-    transition: bottom 0.8s, width 0.8s, left 0.8s;
-    display: none;
+    -webkit-transition: bottom 0.8s, width 0.8s, left .8s;
+    transition: bottom 0.8s, width 0.8s, left .8s;
+    display: none
 }
 
 .script_ballon_img_first {
-    display: block;
+    display: block
 }
 
 .script_ballon_img_larger_0 {
     width: 96px;
     left: calc(50% - 48px);
-    bottom: -1px;
+    bottom: -1px
 }
 
 .script_ballon_img_larger_1 {
     width: 128px;
     left: calc(50% - 64px);
-    bottom: -2px;
+    bottom: -2px
 }
 
 .script_ballon_img_larger_2 {
     width: 160px;
     left: calc(50% - 80px);
-    bottom: -4px;
+    bottom: -4px
 }
 
 .script_ballon_img_larger_3 {
     width: 192px;
     left: calc(50% - 96px);
-    bottom: -8px;
+    bottom: -8px
 }
 
 .script_ballon_img_larger_4 {
     width: 256px;
     left: calc(50% - 128px);
-    bottom: -16px;
+    bottom: -16px
 }
 
 #div_contact {
     width: 80%;
     overflow: hidden;
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 #div_contact_left {
@@ -479,10 +478,10 @@ a {
     float: left;
     padding: 4%;
     margin-right: 2%;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 25px;
     font-size: 22px;
-    box-shadow: 3px 6px 9px #333333;
+    box-shadow: 3px 6px 9px #333
 }
 
 #div_contact_right {
@@ -490,34 +489,34 @@ a {
     height: 376px;
     float: left;
     padding: 4%;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 25px;
     font-size: 26px;
-    box-shadow: 3px 6px 9px #333333;
+    box-shadow: 3px 6px 9px #333
 }
 
 .p_indent {
-    margin-left: 48px;
+    margin-left: 48px
 }
 
 .p_mail {
     margin-left: 16px;
     font-size: 18px;
-    margin-top: 12px;
+    margin-top: 12px
 }
 
 .contact_images {
-    width: 64px;
+    width: 64px
 }
 
 footer {
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: #ffffff;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 700;
     background-color: #FF5000;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 @media only screen and (max-width: 760px) {
@@ -525,24 +524,24 @@ footer {
         text-align: left;
         font-size: 32px;
         width: 90%;
-        padding-left: 10%;
+        padding-left: 10%
     }
     .cursor {
-        cursor: default;
+        cursor: default
     }
     .div_info {
         width: 100%;
-        border-top: 1px solid #666666;
-        border-bottom: 1px solid #666666;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666
     }
     #nav_mobile_menu {
         display: block;
         position: fixed;
         top: 5px;
-        right: 5px;
+        right: 5px
     }
     #mobile_menu_title_div {
-        width: 100%;
+        width: 100%
     }
     #mobile_menu_title_span {
         width: 80%;
@@ -554,45 +553,45 @@ footer {
         vertical-align: middle;
         line-height: 64px;
         color: #FF5000;
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid #333
     }
     #mobile_menu_close {
         width: 20%;
         float: left;
         background-color: #F5F5F5;
         height: 64px;
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid #333
     }
     #mobile_menu_img_close {
-        float: right;
+        float: right
     }
     #nav_mobile_center {
         display: block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto
     }
     #div_mobile_menu {
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 100%
     }
     #div_mobile_menu ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         width: 100%;
-        background-color: #FFFFFF;
-        text-align: center;
+        background-color: #FFF;
+        text-align: center
     }
     #div_mobile_menu li a {
         display: block;
         padding: 24px 16px;
         text-decoration: none;
         position: relative;
-        font-size: 24px;
+        font-size: 24px
     }
     .a_menu_mobile {
-        color: #333333;
+        color: #333
     }
     #div_mobile_menu li a::after {
         content: "";
@@ -601,71 +600,71 @@ footer {
         left: 10%;
         bottom: 10px;
         height: 2px;
-        background: #FF5000;
+        background: #FF5000
     }
     #div_mobile_menu_content {
         width: 100%;
-        height: calc(100% - 64px);
+        height: calc(100% - 64px)
     }
     #div_mobile_menu_center {
         width: 100%;
         padding-top: 10%;
         height: 100%;
-        background-color: #FFFFFF;
-        float: left;
+        background-color: #FFF;
+        float: left
     }
     .div_info {
-        padding: 30px 0px;
+        padding: 30px 0
     }
     #div_about_me_p {
-        width: 100%;
+        width: 100%
     }
     .div_skills {
         width: 220px;
-        margin: 20px 40px;
+        margin: 20px 40px
     }
     .p_info {
         font-size: 18px;
-        margin-bottom: 18px;
+        margin-bottom: 18px
     }
     .p_font_size_big {
         font-size: 26px;
-        padding-bottom: 26px;
+        padding-bottom: 26px
     }
     .p_font_size_medium {
-        font-size: 22px;
+        font-size: 22px
     }
     #div_menu {
-        display: none;
+        display: none
     }
     .hash_jump::before {
-        display: none;
+        display: none
     }
     #slider_control_prev,
     #slider_control_next {
-        font-size: 22px;
+        font-size: 22px
     }
     #slider_main {
-        height: 520px;
+        height: 520px
     }
     .slider_click_top {
-        width: 40%;
+        width: 40%
     }
     .slider_click_bottom {
-        width: 40%;
+        width: 40%
     }
     #div_contact_left {
         width: 79%;
         height: min-content;
         float: none;
         padding: 7%;
-        margin-right: 0%;
+        margin-right: 0;
         margin-left: 2%;
         margin-bottom: 20px;
-        border: 1px solid #333333;
+        border: 1px solid #333;
         border-radius: 25px;
         font-size: 18px;
-        box-shadow: 1% 2% 2% #333333;
+        box-shadow: 1% 2% 2% #333
     }
     #div_contact_right {
         width: 79%;
@@ -673,47 +672,47 @@ footer {
         float: none;
         padding: 7%;
         margin-left: 2%;
-        border: 1px solid #333333;
+        border: 1px solid #333;
         border-radius: 25px;
         font-size: 22px;
-        box-shadow: 1% 2% 2% #333333;
-        word-break: break-all;
+        box-shadow: 1% 2% 2% #333;
+        word-break: break-all
     }
     .p_indent {
-        margin-left: 48px;
+        margin-left: 48px
     }
     .p_mail {
         margin-left: 10px;
         font-size: 15px;
-        margin-top: 8px;
+        margin-top: 8px
     }
     footer {
-        font-size: 14px;
+        font-size: 14px
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .p_font_size_big {
-        font-size: 36px;
+        font-size: 36px
     }
     .p_font_size_medium {
-        font-size: 30px;
+        font-size: 30px
     }
     #div_contact_left {
-        font-size: 26px;
+        font-size: 26px
     }
     #div_contact_right {
-        font-size: 28px;
+        font-size: 28px
     }
     .p_indent {
-        margin-left: 64px;
+        margin-left: 64px
     }
     .p_mail {
         margin-left: 48px;
         font-size: 26px;
-        margin-top: 24px;
+        margin-top: 24px
     }
     .contact_images {
-        width: 76px;
+        width: 76px
     }
 }
