@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let elementMobileNav = document.getElementById("nav_mobile_center").style.width = 100 + "%";
         let mobileNavWidth = elementMobileNav.slice(0, -1);
 
-        window.addEventListener('scroll', function(event) {
+        window.addEventListener('scroll', function() {
             elementMobileNav = document.getElementById("nav_mobile_center").style.width;
             mobileNavWidth = elementMobileNav.slice(0, -1);
             if (mobileNavWidth > 70) {

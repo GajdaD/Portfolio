@@ -384,11 +384,11 @@ a {
     background-color: #00a551;
     position: absolute;
     top: 36px;
-    left: calc(50% - 64px);
+    left: 50%;
     border-radius: 50%;
     display: none;
-    -webkit-transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius .3s;
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s, border-radius .3s;
+    -webkit-transition: width 0.3s, height 0.3s, top 0.3s, border-radius .3s;
+    transition: width 0.3s, height 0.3s, top 0.3s, border-radius .3s;
     transition-timing-function: ease-out;
     z-index: 2
 }
@@ -424,10 +424,11 @@ a {
 .script_ballon_img {
     position: absolute;
     bottom: 5px;
-    left: calc(50% - 32px);
+    left: 50%;
     width: 64px;
-    -webkit-transition: bottom 0.8s, width 0.8s, left .8s;
-    transition: bottom 0.8s, width 0.8s, left .8s;
+    transform: translateX(-32px);
+    -webkit-transition: bottom 0.8s, width 0.8s, transform .8s;
+    transition: bottom 0.8s, width 0.8s, transform .8s;
     display: none
 }
 
@@ -437,32 +438,27 @@ a {
 
 .script_ballon_img_larger_0 {
     width: 96px;
-    left: calc(50% - 48px);
-    bottom: -1px
+    transform: translateX(-48px) translateY(-1px)
 }
 
 .script_ballon_img_larger_1 {
     width: 128px;
-    left: calc(50% - 64px);
-    bottom: -2px
+    transform: translateX(-64px) translateY(-2px)
 }
 
 .script_ballon_img_larger_2 {
     width: 160px;
-    left: calc(50% - 80px);
-    bottom: -4px
+    transform: translateX(-80px) translateY(-4px)
 }
 
 .script_ballon_img_larger_3 {
     width: 192px;
-    left: calc(50% - 96px);
-    bottom: -8px
+    transform: translateX(-96px) translateY(-8px)
 }
 
 .script_ballon_img_larger_4 {
     width: 256px;
-    left: calc(50% - 128px);
-    bottom: -16px
+    transform: translateX(-128px) translateY(-16px)
 }
 
 #div_contact {
